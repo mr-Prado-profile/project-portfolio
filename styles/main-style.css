@@ -179,7 +179,7 @@ nav {
 
 section {
     position: absolute;
-    overflow: scroll;
+    /* overflow: scroll; */
     top: 0;
     left: 0;
     width: 100%;
@@ -211,6 +211,16 @@ section.active {
 
 .hero {
     text-align: center;
+    
+}
+#home .hero {
+    background:var(--content-bg);
+    border-radius:12px;
+    padding:36px;
+    box-shadow:0 8px 30px rgba(2,6,23,0.6);
+    backdrop-filter: blur(6px) saturate(120%);
+    border:1px solid rgba(255,255,255,0.04);
+    
 }
 
 .hero img {
@@ -421,3 +431,4 @@ canvas#bg-canvas {
     display: block;
     pointer-events: none;
 }
+/* Inner section */
