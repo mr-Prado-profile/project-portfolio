@@ -118,8 +118,8 @@ nav {
 .nav-list {
     list-style: none;
     padding: 0;
-    margin: 0;
-    width: 100%;
+    margin: 10px;
+    /* width: 100%; */
 }
 
 .nav-list li {
@@ -159,7 +159,7 @@ nav {
     color: var(--accent);
     text-decoration: none;
 }
-
+/*------------- Main Section--------------- */
 .main {
     margin-left: 260px;
     width: calc(100% - 260px);
@@ -176,12 +176,12 @@ nav {
 .flex-style .blur {
     padding: 36px;
     box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
-    backdrop-filter: blur(6px) saturate(130%);
+    backdrop-filter: blur(6px) saturate(130%) !important;
     border: 1px solid rgba(255, 255, 255, 0.04);
     border-radius: 10px;
     transition: transform 0.4s ease-in-out, background 0.4s, color 0.4s;
-    width: 60%;
-    background: #5757570a;
+    /* width: 60%; */
+    /* background: #5757570a; */
 }
 .icons-logo {
     display: flex;
@@ -200,6 +200,19 @@ nav {
     border: unset;
     margin-top: unset;
     transition: unset;
+}
+.fun {
+    margin: 10px auto 0;
+    border: 1px solid #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+}
+.fun-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+    justify-items: center;
 }
 .fullbody {
     max-width: 200px;
@@ -243,18 +256,25 @@ section.active {
 }
 
 
-/* .hero img {
-    width: 180px;
-    border-radius: 50%;
-    border: 6px solid var(--muted);
-    margin-top: 20px;
-    transition: border 0.4s;
-} */
-
+.btn-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
 .cta {
     display: inline-block;
     margin-top: 20px;
     padding: 12px 20px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+.btn-cta .nav-list .cta {
+    display: inline-block;
+    margin-top: 20px;
+    /* padding: 12px 20px; */
     border-radius: 10px;
     background: var(--accent);
     color: white;
@@ -342,12 +362,10 @@ section.active {
     flex: 1
 }
 
-.fun {
-    width: 420px
-}
+
 
 .section-head {
-    display: inline-block;
+    display: block;
     background: var(--accent);
     color: #111;
     padding: 8px 14px;
@@ -388,12 +406,6 @@ section.active {
     font-size: 14px
 }
 
-.fun-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-    margin-top: 18px
-}
 
 .stat {
     background: var(--content-bg);
