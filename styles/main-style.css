@@ -284,47 +284,33 @@ section.active {
     text-decoration: none;
 }
 
-@media (max-width: 900px) {
-    .sidebar {
-        transform: translateX(-100%);
-    }
-
-    .sidebar.active {
-        transform: translateX(0);
-        animation: slideIn 0.4s ease forwards;
-    }
-
-    @keyframes slideIn {
-        from {
-            transform: translateX(-100%);
-            opacity: 0.5;
-        }
-
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-
-    .menu-toggle {
-        display: block;
-        position: fixed;
-        top: 16px;
-        left: 16px;
-        background: var(--accent);
-        color: white;
-        border: none;
-        border-radius: 6px;
-        padding: 10px 12px;
-        cursor: pointer;
-        z-index: 1100;
-    }
-
-    .main {
-        margin-left: 0;
-        width: 100%;
-    }
+/* Portfolio Section */
+.image-logo .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* flex-wrap: wrap; */
 }
+
+.image-logo img {
+    object-fit: cover;
+    width: 150px;
+    height: auto;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.image-logo a img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.image-logo a img:hover {
+    /* Lift the element up by 10 pixels */
+    transform: translateY(-10px);
+    
+    /* Enhance the shadow to give a more pronounced "floating" appearance */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
 
 .title-row {
     display: flex;
@@ -435,7 +421,7 @@ section.active {
     opacity: .9;
     margin-top: 6px
 }
-
+/* Auto scroll effect */
 .scroll-image-section {
     display: flex;
     justify-content: center;
@@ -455,7 +441,7 @@ section.active {
 .scroll-image-section:hover .scroll-image {
     transform: translateY(-50%);
 }
-
+/* particle backgrond */
 canvas#bg-canvas {
     position: fixed;
     inset: 0;
@@ -466,3 +452,48 @@ canvas#bg-canvas {
     pointer-events: none;
 }
 /* Inner section */
+
+
+/** Responsive
+-------------------------------------------------------*/
+@media (max-width: 900px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+        animation: slideIn 0.4s ease forwards;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+            opacity: 0.5;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 16px;
+        left: 16px;
+        background: var(--accent);
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 12px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    .main {
+        margin-left: 0;
+        width: 100%;
+    }
+}
