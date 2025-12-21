@@ -160,6 +160,7 @@ nav {
     color: var(--accent);
     text-decoration: none;
 }
+
 /*------------- Main Section--------------- */
 .main {
     margin-left: 260px;
@@ -178,7 +179,8 @@ nav {
     background: rgb(97 97 97 / 0%);
     border-radius: 20px;
     border: 1px solid var(--border-color);
-    backdrop-filter: blur(5px); /* This is the key to the glassmorphism effect */
+    backdrop-filter: blur(5px);
+    /* This is the key to the glassmorphism effect */
     -webkit-backdrop-filter: blur(15px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
@@ -192,6 +194,7 @@ nav {
     width: 300px; */
     margin: auto;
 }
+
 .icons-logo img {
     width: 70px;
     height: auto;
@@ -201,12 +204,14 @@ nav {
     margin-top: unset;
     transition: unset;
 }
+
 .fun {
     margin: 10px auto 0;
     border: 1px solid #FFFFFF;
     padding: 10px;
     border-radius: 10px;
 }
+
 .fun-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -214,6 +219,7 @@ nav {
     margin-top: 18px;
     justify-items: center;
 }
+
 .fullbody {
     max-width: 200px;
 }
@@ -263,6 +269,7 @@ section.active {
     align-items: center;
     justify-content: space-evenly;
 }
+
 .cta {
     display: inline-block;
     margin-top: 20px;
@@ -273,6 +280,7 @@ section.active {
     font-weight: 700;
     text-decoration: none;
 }
+
 .btn-cta .nav-list .cta {
     display: inline-block;
     margin-top: 20px;
@@ -285,6 +293,7 @@ section.active {
 }
 
 /* Portfolio Section */
+
 .image-logo .nav-list {
     display: flex;
     align-items: center;
@@ -300,6 +309,7 @@ section.active {
     padding: 10px;
     border-radius: 10px;
 }
+
 .image-logo a img {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -307,10 +317,14 @@ section.active {
 .image-logo a img:hover {
     /* Lift the element up by 10 pixels */
     transform: translateY(-10px);
-    
+
     /* Enhance the shadow to give a more pronounced "floating" appearance */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
+}
+
+/* .auto-scroll-project {
+    display: flex;
+} */
 
 .title-row {
     display: flex;
@@ -421,6 +435,7 @@ section.active {
     opacity: .9;
     margin-top: 6px
 }
+
 /* Auto scroll effect */
 .scroll-image-section {
     display: flex;
@@ -428,19 +443,50 @@ section.active {
     align-items: center;
     overflow: hidden;
     position: relative;
-    height: 80vh;
+    height: 100vh;
     background: #eaeaea;
 }
 
 .scroll-image {
     width: auto;
     max-height: auto;
-    transition: transform 5s linear;
+    transition: transform 15s linear;
 }
 
 .scroll-image-section:hover .scroll-image {
-    transform: translateY(-50%);
+    transform: translateY(50%);
 }
+
+/* ============== */
+.image-scroll-container {
+    /* Set a fixed height for the visible area */
+    height: 700px;
+    /* Hide the parts of the image outside the container */
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #b3b3b3;
+    width: 800px; /* Example width */
+    margin: 20px auto;
+    cursor: pointer; /* Indicates the element is interactive */
+}
+
+.image-scroll-container img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    position: absolute;
+    top: 0;
+    /* Adjust duration for desired speed (e.g., 10s for slow) */
+    transition: transform 10s linear; 
+}
+
+/* On hover, move the image up */
+.image-scroll-container:hover img {
+    /* This value needs to be fine-tuned based on the image's natural height */
+    /* If the image is very long, a larger negative percentage/pixel value is needed */
+    /* The 'calc' value assumes the 300px container height is correct relative to the image height */
+    transform: translateY(calc(-100% + 300px));
+}
+
 /* particle backgrond */
 canvas#bg-canvas {
     position: fixed;
@@ -451,6 +497,7 @@ canvas#bg-canvas {
     display: block;
     pointer-events: none;
 }
+
 /* Inner section */
 
 
