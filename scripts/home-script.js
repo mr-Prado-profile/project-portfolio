@@ -19,15 +19,15 @@ links.forEach((link) => {
   });
 });
 
-themeToggle.addEventListener("click", () => {
-  if (body.getAttribute("data-theme") === "dark") {
-    body.setAttribute("data-theme", "light");
-    themeToggle.textContent = "🌙 Dark Mode";
-  } else {
-    body.setAttribute("data-theme", "dark");
-    themeToggle.textContent = "☀️ Light Mode";
-  }
-});
+// themeToggle.addEventListener("click", () => {
+//   if (body.getAttribute("data-theme") === "dark") {
+//     body.setAttribute("data-theme", "light");
+//     themeToggle.textContent = "🌙 Dark Mode";
+//   } else {
+//     body.setAttribute("data-theme", "dark");
+//     themeToggle.textContent = "☀️ Light Mode";
+//   }
+// });
 
 // about page
 // Animate counters when they come into view
