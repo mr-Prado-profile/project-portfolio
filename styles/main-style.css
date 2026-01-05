@@ -258,7 +258,8 @@ section.active {
 
 .hero {
     text-align: center;
-    background: #0b1020;
+    /* background: #0b1020; */
+    background: #0b1020c7;
     padding: 20px;
     border-radius: 10px;
 }
