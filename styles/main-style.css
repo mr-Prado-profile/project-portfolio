@@ -500,7 +500,11 @@ canvas#bg-canvas {
 }
 
 /* Inner section */
-
+#about {
+    /* display: flex; */
+    flex-direction: row;
+    gap: 15px;
+}
 
 /** Responsive
 -------------------------------------------------------*/
